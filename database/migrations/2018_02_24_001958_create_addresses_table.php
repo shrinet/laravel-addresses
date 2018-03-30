@@ -19,8 +19,6 @@ class CreateAddressesTable extends Migration
             $table->morphs('entity');
 
             $table->boolean('is_primary')->default(false);
-            $table->boolean('is_billing')->default(false);
-            $table->boolean('is_shipping')->default(false);
 
             $table->string('full_name')->nullable();
             $table->string('company')->nullable();
