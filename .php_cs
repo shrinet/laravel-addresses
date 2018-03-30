@@ -12,9 +12,12 @@ $fixers = [
     'combine_consecutive_issets' => true,
     'combine_consecutive_unsets' => true,
     'increment_style' => false,
+    'explicit_indirect_variable' => true,
+    'explicit_string_variable' => true,
     'linebreak_after_opening_tag' => true,
     'list_syntax' => [ 'syntax' => 'long' ],
-    'no_extra_consecutive_blank_lines' => [ 'break', 'continue', 'extra', 'return', 'throw', 'use', 'parenthesis_brace_block', 'curly_brace_block' ],
+    'no_extra_blank_lines' => ['tokens' => ['break', 'continue', 'extra', 'return', 'throw', 'use', 'parenthesis_brace_block', 'square_brace_block', 'curly_brace_block']],
+    'no_leading_import_slash' => true,
     'no_short_echo_tag' => true,
     'no_superfluous_elseif' => true,
     'no_trailing_comma_in_singleline_array' => true,
@@ -49,10 +52,19 @@ $fixers = [
     'no_empty_phpdoc' => false,
     'no_empty_statement' => false,
 
+    'single_line_comment_style' => true,
+
     // Spacing and alignment
     'align_multiline_comment' => true,
+    'binary_operator_spaces' => [
+        'default' => 'align_single_space_minimal',
+        'operators' => [
+            '+=' => 'single_space',
+        ],
+    ],
     'concat_space' => ['spacing' => 'none'],
     'method_argument_space' => true,
+    'method_chaining_indentation' => true,
     'not_operator_with_successor_space' => true,
     'no_spaces_around_offset' => [
         'positions' => [ 'outside' ],
