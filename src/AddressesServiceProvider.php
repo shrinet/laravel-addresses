@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Werxe\Addresses;
 
 use Illuminate\Support\ServiceProvider;

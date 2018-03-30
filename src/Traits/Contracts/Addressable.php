@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Werxe\Addresses\Traits\Contracts;
 
 use Werxe\Addresses\Models\Contracts\Address;

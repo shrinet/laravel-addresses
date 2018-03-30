@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Werxe\Addresses\Traits;
 
 use Werxe\Addresses\Models\Address as AddressModel;
@@ -72,7 +74,7 @@ trait Addressable
      */
     public function deleteAllAddresses(): bool
     {
-        return $this->addresses()->delete();
+        return (bool) $this->addresses()->delete();
     }
 
     /**
