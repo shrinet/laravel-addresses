@@ -22,19 +22,15 @@ class Address extends Model implements AddressContract
     protected $fillable = [
         'is_primary',
         'full_name',
-        'company',
-        'street_type',
-        'street_name',
-        'house_number',
-        'floor',
-        'appartment',
-        'country',
-        'city',
+        'company_name',
+        'line1',
+        'line2',
+        'state',
         'region',
         'postal_code',
-        'phone',
-        'access_code',
-        'observations',
+        'country',
+        'phone_number',
+        'instructions',
     ];
 
     /**

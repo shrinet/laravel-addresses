@@ -37,9 +37,9 @@ class FunctionalTestCase extends \Orchestra\Testbench\TestCase
     {
         $app['config']->set('database.default', 'testbench');
         $app['config']->set('database.connections.testbench', [
-            'driver' => 'sqlite',
+            'driver'   => 'sqlite',
             'database' => ':memory:',
-            'prefix' => '',
+            'prefix'   => '',
         ]);
     }
 
@@ -58,12 +58,12 @@ class FunctionalTestCase extends \Orchestra\Testbench\TestCase
     protected function getAddressAttributes(array $attributes = [])
     {
         return array_merge([
-            'name' => 'John Doe',
-            'country' => 'US',
-            'street_name' => '1600 Pennsylvania Avenue NW',
-            'city' => 'Washington',
-            'region' => 'DC',
+            'full_name'   => 'John Doe',
+            'line1'       => '1600 Pennsylvania Avenue NW',
+            'city'        => 'Washington',
+            'region'      => 'DC',
             'postal_code' => '20500',
+            'country'     => 'US',
         ], $attributes);
     }
 }

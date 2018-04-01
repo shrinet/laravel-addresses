@@ -23,19 +23,15 @@ class CreateAddressesTable extends Migration
             $table->boolean('is_primary')->default(false);
 
             $table->string('full_name')->nullable();
-            $table->string('company')->nullable();
-            $table->string('street_type')->nullable();
-            $table->string('street_name')->nullable();
-            $table->string('house_number')->nullable();
-            $table->string('floor')->nullable();
-            $table->string('appartment')->nullable();
-            $table->char('country', 2)->nullable();
-            $table->string('city')->nullable();
+            $table->string('company_name')->nullable();
+            $table->string('line1')->nullable();
+            $table->string('line2')->nullable();
+            $table->string('state')->nullable();
             $table->string('region')->nullable();
             $table->string('postal_code')->nullable();
-            $table->string('phone')->nullable();
-            $table->string('access_code')->nullable();
-            $table->text('observations')->nullable();
+            $table->char('country', 2)->nullable();
+            $table->string('phone_number')->nullable();
+            $table->text('instructions')->nullable();
 
             $table->timestamps();
         });
